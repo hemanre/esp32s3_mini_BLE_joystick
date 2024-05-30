@@ -1,7 +1,7 @@
 | Supported Target  | ESP32-S3 |
 | ----------------- | -------- |
 
-# RoPaw
+# Scope
 
 BLE Joystick controller using ESP32S3 Mini 
 
