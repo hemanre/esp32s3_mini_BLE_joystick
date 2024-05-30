@@ -1,53 +1,34 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C6 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | ----- |
+| Supported Target  | ESP32-S3 |
+| ----------------- | -------- |
 
-# Hello World Example
+# RoPaw
 
-Starts a FreeRTOS task to print "Hello World".
+BLE Joystick controller using ESP32S3 Mini 
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+## Setup
 
-## How to use example
+### Hardware Required
 
-Follow detailed instructions provided specifically for this example.
+* ESP32-S3 Mini 
+* A USB C cable for power supply and programming
 
-Select the instructions depending on Espressif chip installed on your development board:
+### ESP-IDF
 
-- [ESP32 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/index.html)
-- [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
+Version 5.2.1
 
+### Espressif-IDE
 
-## Example folder contents
+version: IEP 2.12.1
+Download: https://github.com/espressif/idf-eclipse-plugin --> espressif-ide-setup-2.12.1-with-esp-idf-5.2.exe 
 
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
+### Build and Flash
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
-
-Below is short explanation of remaining files in the project folder.
+Build the project and flash it to the board, then run monitor tool to view serial output:
 
 ```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
+idf.py -p PORT flash monitor
 ```
 
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
+(To exit the serial monitor, type ``Ctrl-]``.)
 
-## Troubleshooting
-
-* Program upload failure
-
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
-
-## Technical support and feedback
-
-Please use the following feedback channels:
-
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
-
-We will get back to you as soon as possible.
+See the Getting Started Guide for full steps to configure and use ESP-IDF to build projects.
